@@ -21,9 +21,10 @@ const linkRoutes = require('./routes/link');
 
 
 //app-middlewares
+app.use(cors());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
-app.use(cors({ origin: process.env.CLIENT_URL }));
+// app.use(cors({ origin: process.env.CLIENT_URL }));
 
 //middlewares
 app.use("/api",authRoutes);
